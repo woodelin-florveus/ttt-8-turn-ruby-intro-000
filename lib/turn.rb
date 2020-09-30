@@ -24,6 +24,10 @@ else
 end
 end
 
+def position_taken?(board, answer)
+  board[answer] != " "
+end
+
 def turn(board)
     puts "Please enter 1-9:"
     answer = gets.chomp
