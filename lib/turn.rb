@@ -13,13 +13,42 @@ def input_to_index(user_input)
 end
 
 def valid_move?(board,index_num)
-if index_num.between?(0,8) && !position_taken?(board,index_num)
-  return true
-else
-  false
-end
+  def position_taken?(board,index_num)
+  if board[index_num] == " " || board[index_num] == "" || board[index_num] == nil
+    return false
+  else
+    return true
+  end
+  end
+
+  def board?(num)
+    if num.between?(0,8) == true
+      return true
+    else
+      return false
+    end
+  end
+
+  if (position_taken?(board,index_num)) == false && (board(index_num) == true)
+    return true
+  else
+    return false
+  end
+
+# if index_num.between?(0,8) && !position_taken?(board,index_num)
+#   return true
+# else
+#   false
+# end
 end
 
+def board?(num)
+  if num.between?(0,8) == true
+    return true
+  else
+    return false
+  end
+end
 
 
 def position_taken?(board, answer)
