@@ -42,21 +42,11 @@ def valid_move?(board,index_num)
 # end
 end
 
-def board?(num)
-  if num.between?(0,8) == true
-    return true
-  else
-    return false
-  end
-end
 
-
-def position_taken?(board, answer)
-  board[answer] != " "
-end
 
 def move(board, index, current_player = "X")
   board[index] = current_player
+  return board
 end
 
 def turn(board)
